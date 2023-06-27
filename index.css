@@ -1,0 +1,101 @@
+
+.nav-link{
+    font-family:sans-serif;
+    color: rgb(83, 80, 80);
+
+}
+.nav-item{
+    font-family:sans-serif;
+    color: rgb(83, 80, 80);
+}
+.conteiner1{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space space-between;
+    background-color:
+    rgb(253,202,225);
+}
+
+.box1{
+    margin-top: 230px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    background-color: rgb(213, 255, 241);
+    border: solid 10px rgb(113, 253, 235);
+    height: 30%;
+    border-radius: 20px;
+    
+}
+
+.box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 70%;
+   
+}
+.imgpresentacion{
+    width: 628px;
+    border-radius: 50%;
+}
+.img1, .img2{
+    width: 50%;
+}
+h1{
+    text-align: center;
+    font-family:cursive;
+}
+.presentacion {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: x-large;
+}
+.conteiner2{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.seccion2{
+    display: flex;
+    align-content: column;
+    justify-content:space-around;
+   
+
+}
+.titleSobreMi {
+    margin: 50px;
+    padding: 20px;
+    background-color: rgb(165, 236, 213);
+    font-family:cursive;
+}
+.dentro{
+    padding:10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: larger;
+}
+span{
+    font-family:cursive;
+    font-style: oblique;
+    color: rgb(100, 184, 184);
+}
+.seccion3{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    margin-top: 150px;
+    background-color: rgb(238, 165, 199);
+    
+}
+
+.productos{
+    margin: 50px;
+    padding: 50px;
+    font-family: cursive;
+    text-align: center;
+    background-color: rgb(160, 209, 209);
+    border-radius: 50%;
+}
