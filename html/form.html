@@ -9,23 +9,28 @@
     <link rel="stylesheet" href="../style/styleform.css">
 </head>
 <body>
-    <div><h1>CONTACTO</h1></div>
-    <p>Me gustaría saber que piensas acerca de mi emprendimiento o si tienes alguna consulta.
+    <div class ="conteiner-title">
+        <div class="title"><h2>ESTE ES NUESTRO ESPACIO DE CONTACTO</h2></div>
+        <div class="p-tittle"><p>Para mí, es muy importante saber  que piensas acerca de mi emprendimiento..si tienes alguna consulta o simplemente quieres contarme alguna anecdota.
+        <br>Es por ello, que cree esta seccion para que te sientas libre de dejarme tu mensaje y setirnos un poquito mas cerca...
         <br>
-        ¡Las opiniones siempre que sea con mucho respeto suman y con gusto me gustaria responderte!!
-    </p>
-    <div>
+        <strong>¡Con gusto me gustaria responderte!</strong>
+        </p>
+        </div>
+    </div>
+    <div class="container-form">
+        <div class="form">
         <form action="">
-                <label for="name">Nombre  <input type="text" id="name" name="name" required>
+                <label for="name">Nombre:  <input type="text" id="name" name="name" required>
                 </label>
                
         
-                <label for="email">Correo Electroníco <input type="email" id="email" name="email" required>
+                <label for="email">Correo Electroníco: <input type="email" id="email" name="email" required>
                  </label>
                 
             
-                <label for="message">Dejame tu mensaje
-                </label> <textarea type="text"  id="message" name="message"></textarea>    
+                <label for="message">Dejame tu mensaje:
+                </label> <textarea type="text"  id="message" name="message" placeholder="no mas de 300 caracteres" maxlength="300"> </textarea>    
                 
 
                 <label for="question">¿Te gustaria participar de un taller?
@@ -35,17 +40,33 @@
                     </label>
                 </label>   
                 
-           <input type="submit" id="submit">
-            <input type="reset" value="reset">
+           <input type="submit" id="submit" class="btn-form">
+            <input type="reset" value="reset" class="btn-form">
      </form>
-</div>
+     <footer>
+        <div class="footer">
+          <div class="tittle"><a href="./index.html">orquideacreaciones.com</a></div>
+          <div>
+           <div class="redes"> 
+              <di class="redes"><strong>Facebook:</strong>OrquideaCreaciones</di>
+              <di class="redes"><strong>Instagram:</strong>Orquideacreaciones_</di>
+            </div>
+            <div class="redes"> 
+              <di class="redes"><strong>E-mail:</strong> orquideacreaciones@hotmail.com</di>
+              <di class="redes"><strong>Whatsapp</strong> 2262-574095</di>
+            </div>
+          </div>
+        </div>
+        </footer>
+    
+    </div>
 <dialog id="modal">
     <h2>¡Gracias por dejarme tu comentario!</h2>
     <p>Es muy importante mantenernos conectados asi que a la brevedad te estaré respondiendo..<br>¡Muchos abrazos! Atentamente, Guada</p>
     <button id="btn-close">cerrar</button>
 </dialog>
 
-<a href="index.html">Volver a la página principal</a>
+
 <script type="text/javascript" src="../js/form.js"></script>
 </body>
 </html>
