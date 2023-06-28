@@ -116,6 +116,7 @@ footer{
 .tittle{ 
     padding-left: 10px;
     font-family: sans-serif;
+    color: rgb(107, 104, 104);
     font-style:italic;
 
 
@@ -127,5 +128,6 @@ footer{
     flex-direction: row;
     justify-content: space-around;
     font-family: sans-serif;
+    color:  rgb(107, 104, 104);
     font-size:small ;
 }
