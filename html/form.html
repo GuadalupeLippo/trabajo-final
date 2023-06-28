@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto/OrquideaCreaciones</title>
+    <link rel="shortcut icon" href="../images/crochet-logo-design.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/styleform.css">
+</head>
+<body>
+    <div><h1>CONTACTO</h1></div>
+    <p>Me gustaría saber que piensas acerca de mi emprendimiento o si tienes alguna consulta.
+        <br>
+        ¡Las opiniones siempre que sea con mucho respeto suman y con gusto me gustaria responderte!!
+    </p>
+    <div>
+        <form action="">
+                <label for="name">Nombre  <input type="text" id="name" name="name" required>
+                </label>
+               
+        
+                <label for="email">Correo Electroníco <input type="email" id="email" name="email" required>
+                 </label>
+                
+            
+                <label for="message">Dejame tu mensaje
+                </label> <textarea type="text"  id="message" name="message"></textarea>    
+                
+
+                <label for="question">¿Te gustaria participar de un taller?
+                    <label for="si">Sí<input type="radio" id="si" name="question" value="si">
+                    </label>
+                    <label for="No">No<input type="radio"     id="no" name="question" value="no">
+                    </label>
+                </label>   
+                
+           <input type="submit" id="submit">
+            <input type="reset" value="reset">
+     </form>
+</div>
+<dialog id="modal">
+    <h2>¡Gracias por dejarme tu comentario!</h2>
+    <p>Es muy importante mantenernos conectados asi que a la brevedad te estaré respondiendo..<br>¡Muchos abrazos! Atentamente, Guada</p>
+    <button id="btn-close">cerrar</button>
+</dialog>
+
+<a href="index.html">Volver a la página principal</a>
+<script type="text/javascript" src="../js/form.js"></script>
+</body>
+</html>
