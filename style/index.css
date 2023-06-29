@@ -65,7 +65,7 @@ h1{
    
 }
 .fotomia{
-    margin-top: 20px;
+    
     display: flex;
     align-content: column;
     justify-content:space-around;
@@ -78,11 +78,19 @@ h1{
     text-align: center;
 
     margin: 50px;
+    margin-top: 100px;
+    margin-bottom: 0;
     padding:  75px;
     padding-top: 75px;
     background-color: #67ccca60;
     height: min-content;
     font-family:cursive;
+}
+.imgMia{
+    display: flex;
+    padding:10px;
+    justify-content: center;
+   
 }
 .sobreMi{
     padding:10px;
