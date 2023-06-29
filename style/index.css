@@ -1,16 +1,13 @@
 body{
-    background-color: rgb(255, 240, 223);
+    color: rgb(70, 67, 67);
+}
+.navbar .navbar-nav .nav-link:hover{
+    background-color: #FE939D75;
+     font-family:sans-serif;;
 }
 
-.nav-link{
-    font-family:sans-serif;
-    color: rgb(83, 80, 80);
 
-}
-.nav-item{
-    font-family:sans-serif;
-    color: rgb(83, 80, 80);
-}
+
 .conteiner1{
     display: flex;
     width: 100%;
@@ -18,7 +15,7 @@ body{
     flex-direction: column;
     justify-content: space space-between;
     background-color:
-    rgb(253,202,225);
+    #FEB5BE50;
 }
 
 .box1{
@@ -26,10 +23,10 @@ body{
     margin-left: 20px;
     margin-right: 20px;
     padding: 5px;
-    background-color: rgb(213, 255, 241);
-    border: solid 10px rgb(113, 253, 235);
+    background-color: #77d8d650 ;
+    border: solid 2px  #FE939D;
     height: 30%;
-    border-radius: 20px;
+    border-radius: 30px;
     
 }
 
@@ -50,18 +47,25 @@ body{
 h1{
     text-align: center;
     font-family:cursive;
+    color: #60BEBD;
 }
 .presentacion {
+    
     text-align: center;
     font-family: sans-serif;
+    color: rgb(70, 67, 67);
     font-size: x-large;
 }
 .conteiner2{
     display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 100%;
+   
+   background-color:
+   #FEB5BE20;
+   
 }
-.seccion2{
+.fotomia{
+    margin-top: 20px;
     display: flex;
     align-content: column;
     justify-content:space-around;
@@ -69,12 +73,18 @@ h1{
 
 }
 .titleSobreMi {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
     margin: 50px;
-    padding: 20px;
-    background-color: rgb(165, 236, 213);
+    padding:  75px;
+    padding-top: 75px;
+    background-color: #67ccca60;
+    height: min-content;
     font-family:cursive;
 }
-.dentro{
+.sobreMi{
     padding:10px;
     text-align: center;
     font-family: sans-serif;
@@ -83,24 +93,31 @@ h1{
 span{
     font-family:cursive;
     font-style: oblique;
-    color: rgb(100, 184, 184);
+    color: #FE939D;
 }
 .seccion3{
     display: flex;
     flex-direction: column;
     align-items: space-around;
-    margin-top: 150px;
-    background-color: rgb(253, 171, 210);
+    width: 100%;
+    padding: 100px;
+    background-color:
+    #FEB5BE50;
+    background-color: rgb(253, 171, 210,0.8);
     
 }
 
 .productos{
+    display: flex;
+    justify-content: center;
+    text-align: center;
     margin: 50px;
+    margin-bottom: 0px;
     padding: 50px;
     font-family: cursive;
-    text-align: center;
+    text-transform: uppercase;
     background-color: rgb(141, 228, 228);
-    border-radius: 50%;
+    border-radius: 120px;
 }
 footer{
     display: flex;
@@ -109,7 +126,7 @@ footer{
 .footer{
     background-color: #cafde6;;
     width: 100%;
-    margin: 20px 5px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -120,6 +137,9 @@ footer{
     font-style:italic;
 
 
+}
+.carousel-inner{
+    padding: 50px;
 }
 .redes{
     margin:2px;

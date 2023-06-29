@@ -11,40 +11,44 @@
     <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" >
             <div class="container-fluid">
-              <a class="navbar-brand" href="#seccion1"> <img src="../images/logo orquidea.jpg"> </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <a class="navbar-brand d-lg-none d-xl-block
+               d-xl-none d-xxl-block
+              Oculto solo en xxl	.d-xxl-none" href="#seccion1" > <img src="../images/logoguada_720 (1).png" alt="logo" height="100"> </a>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto ">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#seccion2">Sobre mí</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#seccion3">Mis productos</a>
+                    <a class="nav-link " href="#seccion3">Mis productos</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Info útil
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="">Asunto Importante</a></li>
-                      <li><a class="dropdown-item" href="#">¿como adquiero los productos?</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="form.html">Contacto</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                  
+                </ul> 
+              <a class="navbar-brand d-none d-sm-block
+              	d-sm-none d-md-block
+                d-md-none d-lg-block" href="#seccion1"> <img src="../images/logoguada_720 (1).png" alt="logo" height="100">
+              </a>
+             
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="">Info útil</a></li>
+                  <li class="nav-item"><a class="nav-link active" aria-curren
+                  t="page" href="form.html">Contacto</a></li>
+                </ul>      
+              
               </div>
-            </div>
+
           </nav>
-    <div class="conteiner1"> 
+                    
+                      
+                  
+                
+    
+    <div class="conteiner1" > 
       <section id="seccion1">
         <div class="box1">
             <h1>¡TE DOY LA BIENVENIDA A ESTE EMPRENDIMIENTO!</h1>
@@ -60,15 +64,15 @@
       </section>
     </div>
     <div class="conteiner2" >
-      <section id="seccion2">
-        <div class="titleSobreMi"><h2>
-          ¡Dejame que te cuente un poco sobre mí!</h2>
+      <section id="seccion2" >
+        <div  class="titleSobreMi"><h2>
+          ¡Te cuento un poco sobre mí!</h2>
         </div>
-          <div class="seccion2">
+          <div class="fotomia">
             <div>
               <img src="../images/sobre mí.jpg" alt="foto sobre mi">
             </div>
-            <div class="dentro">
+            <div class="sobreMi">
               <p>Mi nombre es Guadalupe nací en Rauch y actualmente vivo en la ciudad de San Cayetano,pcia Bs.As, Argentina. Estoy casada y ¡Soy mama de hermosas niñas! 
                 <br>Durante la pandemia (como a mas de uno nos debe haber pasado),necesitaba ocupar mi tiempo y descubrí este amplio mundo del tejido que me sirvió muchisimo de terapia!..Empece fabricando pequeñas cosas como colitas y accesorios para mis hijas...luego pasé a tejer amigurumis mirando videos y revistas ¡enseguida me atrapó la tecnica tan bella y extensiva que tienen!.. Tejer, destejer y volver a comenzar se convirtió en mi rutina diaria donde me pasaba horas rodeada de hilos y agujas siempre tratando de obtener bellos resultados..
                  <br>Conejos...vaquitas... ovejitas...animalitos que cada vez iban siendo mas pedidos! Fue así como nacio este emprendimiento <span>Orquidea Creaciones</span>. 
@@ -82,7 +86,7 @@
   </div>
 
   <section id="seccion3" class="seccion3">
-    <h3 class="productos">Por acá les dejo algunas fotitos de mis productos...</h3>
+    <div class="productos"><h3 >Algunos bellos amiguitos que podes adquirir acá</h3></div>
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -91,10 +95,10 @@
           </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../images/imagescarrousel/vaca caballo.jpg" class="d-block w-100" alt="VACA Y CABALLO">
+            <img src="../images/imagescarrousel/amigus.jpeg" class="d-block w-100" alt="VACA Y CABALLO">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Vaquita leila y caballo piam</h5>
-              <p>Ambos con un tamaño de 35cm</p>
+              <h5>una gran familia</h5>
+              <p>hecho con amor</p>
             </div>
           </div>
           <div class="carousel-item">
