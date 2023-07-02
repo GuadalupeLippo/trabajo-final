@@ -1,12 +1,23 @@
 body{
+    background-color: #f7dadd;
     color: rgb(70, 67, 67);
 }
 .navbar .navbar-nav .nav-link:hover{
     background-color: #FE939D75;
-     font-family:sans-serif;;
+     font-family:sans-serif;
+     border-radius: 10px;
 }
 
+.carrito {
+    background-color: #FE939D;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
 
+.carrito:hover{
+    background-color: #FE939D20;
+}
 
 .conteiner1{
     display: flex;
@@ -134,11 +145,12 @@ footer{
 .footer{
     background-color: #cafde6;;
     width: 100%;
-    margin-top: 20px;
+    padding-top: 12px;
     display: flex;
     flex-direction: column;
 }
 .tittle{ 
+    padding-top: 12px;
     padding-left: 10px;
     font-family: sans-serif;
     color: rgb(107, 104, 104);
