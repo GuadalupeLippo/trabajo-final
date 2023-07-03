@@ -32,7 +32,7 @@ function generarId(arr) {
 }
 
 
-function renderTable (){
+function renderTable (data){
     const tablaPedidos = document.querySelector("tbody");
     //agregue una clase para css
     tablaPedidos.classList.add(`tabla-ped`)
@@ -97,6 +97,8 @@ function handleRowClick(e) {
 
 listaPedidosModal.showModal()
 }
+
+
 //funciones de la ventana Modal
 function handleActualizarBtn(e) {
     e.preventDefault()
@@ -115,13 +117,20 @@ function handleActualizarBtn(e) {
 
 };
 function handleEliminarBtn() {
-    const pedId = editarListaPed.querySelector("#pedId").textContent;
-   const newPedidos = pedidos.filter(ped=> ped.id !== pedId);
+    const pedId =Number( editarListaPed.querySelector("#pedId").textContent);
    
    
+   const validar = confirm("¿desea eliminar el pedido?")
+   if(validar == true) {
+ const pedN = pedidos.filter(ped => ped.id !== pedId);
+ console.log(pedN)  //falta mostrar por pantalla
+ 
+
     listaPedidosModal.close();
-    renderTable()
+    
+   
 };
+}
 function handleEstadoBtn() {
     const pedId = Number(editarListaPed.querySelector("#pedId").textContent);
     
@@ -151,7 +160,7 @@ function AgregarTareas(e) {
             estado: false
         }
      pedidos.push(nuevosPed);
-    renderTable();
+    renderTable(pedidos);
     agregarPedidos.reset()
     }
 

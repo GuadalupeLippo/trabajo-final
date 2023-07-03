@@ -106,3 +106,23 @@ input{
  .enProceso{
    color: rgb(241, 88, 88)
  }
+ .tablaPedidoModal{
+   border: solid 5px rgb(127, 229, 255);
+   padding: 0px;
+   border-radius: 30px;
+ }
+ #editarListaPed{
+   margin: 0px;
+   padding: 40px;
+ }
+ .btnModal{
+   font-family: cursive;
+   color: rgb(32, 32, 32);
+   padding: 8px;
+   border:double;
+   border-radius: 5PX;
+   background-color:rgb(136, 231, 255); ;
+ }
+ .btnModal:hover{
+background-color: #b2f1f0;
+ }
