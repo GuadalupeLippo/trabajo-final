@@ -26,6 +26,7 @@
          
         <button type="submit" class="btn-form">ingresar</button>
     </form>
+    <div class="table">
    <table id="tablaDePedidos" >
     <thead>
         <tr>
@@ -38,8 +39,23 @@
     <tbody>
 
     </tbody>
+    </table>
+</div >
+    <dialog id="listaPedidosModal">
+        <form id="editarListaPed">
+           <p>pedido nro <span id="pedId"></span></p>
+            <label for="pedidoModal">Pedido:</label>
+            <input type="text" id="pedidoModal">
+            <label for="descripcionModal">Descripcion:</label>
+            <input type="text" id="descripcionModal">
+            <p >Estado:<span id="estadoModal"></span></p>
 
-   </table>
+            <button type="button" id="btnEliminar">eliminar</button>
+            <button type="submit" id="btnActualizar">actualizar</button>
+            <button type="button" id="btnEstado">cambiar estado</button>
+            <button type="button" id="btnCerrar">cerrar</button>
+        </form>
+    </dialog>
    <script type="text/javascript" src="../js/list.js"></script>
 </body>
 </html>

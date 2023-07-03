@@ -2,19 +2,34 @@ const pedidos = []
 
 //capturacion de elementos
 const agregarPedidos =  document.getElementById("agregarPedido");
-agregarPedidos.addEventListener("submit",handleAgregarTareas);
+const listaPedidosModal = document.getElementById("listaPedidosModal");
+const editarListaPed = document.getElementById("editarListaPed");
+const btnEliminar = document.getElementById("btnEliminar");
+const btnEstado = document.getElementById("btnEstado");
+const btnCerrar = document.getElementById("btnCerrar");
 
-function generarId() {
-    if (pedidos.length === 0) {
+
+
+
+//escucha de elementos
+agregarPedidos.addEventListener("submit",AgregarTareas);
+editarListaPed.addEventListener("submit",handleActualizarBtn); 
+btnEliminar.addEventListener("click",handleEliminarBtn);
+btnEstado.addEventListener("click",handleEstadoBtn);  
+btnCerrar.addEventListener("click", function(){listaPedidosModal.close()});
+  
+
+
+function generarId(arr) {
+    if (arr.length === 0) {
         return 1;
     } else {
-            const lastPed = pedidos [pedidos.length -1]
+            const lastPed = arr [arr.length -1]
     
          return lastPed.id + 1 
     }
  
 }
-console.log(generarId())
 
 
 function renderTable (){
@@ -26,17 +41,18 @@ function renderTable (){
     tablaPedidos.innerHTML = "";
     
     
-    pedidos.forEach(ped => {
+    pedidos.forEach((ped) => {
     const row = document.createElement("tr");
-    
+    row.classList.add(`tabla-row`)
+    row.setAttribute("id", "ped")
     row.setAttribute("data-ped-id",ped.id);
-    console.log(row)
+    
     
     
     row.addEventListener("click", handleRowClick);
 
     const nroPedCell = document.createElement("td");
-    nroPedCell.textContent= ped.nroPedido;
+    nroPedCell.textContent= ped.id;
     row.appendChild(nroPedCell);
 
     const pedCell = document.createElement("td");
@@ -48,7 +64,7 @@ function renderTable (){
     row.appendChild(descripcionCell);
     
     const estadoCell = document.createElement("td");
-    estadoCell.textContent= ped.estado ? "entregado" : "pendiente";
+    estadoCell.textContent= ped.estado ? "entregado" : "en proceso";
     row.appendChild(estadoCell);
 
     tablaPedidos.appendChild(row);
@@ -56,10 +72,70 @@ function renderTable (){
     })
 }
 
-function handleRowClick() {}
+function handleRowClick(e) {
+   const pedId = e.currentTarget.getAttribute("data-ped-id");
+   const ped = pedidos.find((pedido)=>pedido.id === Number(pedId));
 
 
-function handleAgregarTareas(e) {
+    const nroPedido = document.getElementById("pedId");
+    nroPedido.textContent = ped.id;
+    const pedidoInput = editarListaPed.querySelector("#pedidoModal");
+    pedidoInput.value = ped.pedido;
+    console.log(ped.pedido)
+    const descripcionInput = editarListaPed.querySelector("#descripcionModal");
+    descripcionInput.value = ped.descripcion;
+    const estadoModal = document.getElementById("estadoModal");
+    if(ped.estado)
+    {
+        estadoModal.innerText = "entregado"; 
+        estadoModal.classList.add(`entregado`)  
+        estadoModal.classList.remove("enProceso") 
+    } else {estadoModal.innerText = "en proceso"
+            estadoModal.classList.add(`enProceso`) 
+            estadoModal.classList.remove("entregado") 
+        }
+
+listaPedidosModal.showModal()
+}
+//funciones de la ventana Modal
+function handleActualizarBtn(e) {
+    e.preventDefault()
+    const pedidoInput = editarListaPed.querySelector("#pedidoModal");
+    const pedido = Number(editarListaPed.querySelector("#pedId").textContent);
+    const pedNew = pedidos.find(ped=> ped.id === pedido);
+    pedNew.pedido = pedidoInput.value
+
+
+    const descripcionInput = editarListaPed.querySelector("#descripcionModal");
+    const pedId = Number(editarListaPed.querySelector("#pedId").textContent);
+    const ped = pedidos.find(ped=> ped.id === pedId)
+    ped.descripcion = descripcionInput.value
+    renderTable()
+    listaPedidosModal.close();
+
+};
+function handleEliminarBtn() {
+    const pedId = editarListaPed.querySelector("#pedId").textContent;
+   const newPedidos = pedidos.filter(ped=> ped.id !== pedId);
+   
+   
+    listaPedidosModal.close();
+    renderTable()
+};
+function handleEstadoBtn() {
+    const pedId = Number(editarListaPed.querySelector("#pedId").textContent);
+    
+    const ped = pedidos.find(ped=> ped.id === pedId)
+    if(ped.estado === true) {
+        ped.estado = false
+    } else{ ped.estado = true}
+
+    listaPedidosModal.close();
+    renderTable()
+};
+
+
+function AgregarTareas(e) {
     e.preventDefault();
 
     const pedidoInput = agregarPedidos.querySelector("input");
@@ -69,7 +145,7 @@ function handleAgregarTareas(e) {
 
     if(pedido !== "" && descrTextArea !== "") {
         const nuevosPed = {
-            nroPedido: generarId(),
+            id: generarId(pedidos),
             pedido: pedido,
             descripcion: descripcion,
             estado: false

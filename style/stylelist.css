@@ -3,10 +3,9 @@
     background-image: url(../images/pedidosbackground.jpg);
     background-repeat: no-repeat ;
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
-    position: fixed;
     width: 100%;
-    height: 100%;
     background-color: #f8edef;
     color: rgb(59, 73, 78);
 }
@@ -55,8 +54,8 @@ input{
     border: solid 1px #ff8795;
 
  }
- textarea{
-    height: 30px;;
+ form textarea{
+    height: 75px;;
     width: 100%;
     resize:none;
     outline: none;
@@ -73,18 +72,37 @@ input{
  .btn-form:hover{
     background-color: #fd9aa6;
  }
+
+ .table{ display: flex;
+   align-content: center;
+   align-items: flex-start;
+   padding: 30px 50px;
+   padding-top: 0;
+ }
  #tablaDePedidos{
    width: 100%;
-    margin-top: 75px;
-    border-collapse: collapse;
+   border-collapse: collapse;
     text-transform: uppercase;
     text-align: center;
  }
  #tablaDePedidos th,#tablaDePedidos td{
     padding: 5px 10px;
-    background-color: #fffefe;
+    background-color: #fff1f8;
     border: solid 1px #ccc9c9;
  }
  .tabla-ped{
+
     text-transform: lowercase;
+ }
+ .tabla-row:hover{
+   cursor: pointer;
+  color: #ff8795;
+ }
+
+ .entregado{
+   text-transform: capitalize;
+   color: rgb(37, 172, 37);
+ }
+ .enProceso{
+   color: rgb(241, 88, 88)
  }

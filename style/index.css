@@ -1,10 +1,10 @@
 body{
-    background-color: #f7dadd;
+    background-color: #fff7f8;
     color: rgb(70, 67, 67);
+    font-family: sans-serif;
 }
 .navbar .navbar-nav .nav-link:hover{
     background-color: #FE939D75;
-     font-family:sans-serif;
      border-radius: 10px;
 }
 
@@ -88,14 +88,15 @@ h1{
     justify-content: center;
     text-align: center;
 
-    margin: 50px;
+    margin: 50px 20px;
     margin-top: 100px;
-    margin-bottom: 0;
-    padding:  75px;
+    margin-bottom: 30px;
+    padding:  50px 20px;
     padding-top: 75px;
-    background-color: #67ccca60;
+    background-color: #6ac7c550;
     height: min-content;
     font-family:cursive;
+    text-transform: uppercase ;
 }
 .imgMia{
     display: flex;
@@ -112,9 +113,46 @@ h1{
 span{
     font-family:cursive;
     font-style: oblique;
-    color: #FE939D;
+    color: #f5a8b0;
 }
+
 .seccion3{
+    background-color: #cafde6;
+    margin:  100px ;
+    padding: 100px;
+    display:flex;
+    flex-direction: column;
+    align-content:space-around;
+    border-radius: 30px;
+  
+}
+.li-amigurumi{
+    margin: 15px 0;
+    padding: 15px 0;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.amigurumi{
+    padding: 20px;
+   
+}
+
+.title-amigurumi{
+    text-align: center;
+    padding:20px;
+    font-family: cursive;
+    color: #2ba19f;
+    font-size:xx-large;
+    }
+.text-amigurumi{
+    padding:  15px 0 ;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.seccion4{
     display: flex;
     flex-direction: column;
     align-items: space-around;
@@ -122,7 +160,8 @@ span{
     padding: 100px;
     background-color:
     #FEB5BE50;
-    background-color: rgb(253, 171, 210,0.8);
+    background-color: rgba(245, 192, 218, 0.8);
+    
     
 }
 

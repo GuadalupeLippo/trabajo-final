@@ -35,7 +35,6 @@ textarea{
     color: white;
     font-weight:bold;
     background:rgb(74, 161, 219);
-    border:solid 1px ;
     width:80px;
     height:25px
 }
@@ -45,6 +44,7 @@ textarea{
 }
 .conteiner-title{
     background-image: url(../images/backformtitle.jpg);
+    margin-top: 50px;
     background-size: cover;
     display: flex;
     height: 500PX;
@@ -54,15 +54,15 @@ textarea{
     display: flex;
     height: max-content;
     margin-left: 20px;
-    padding: 32px;
+    padding: 60px;
     align-items: center;
     text-align: center;
     border-radius: 360px;
-   background-color: rgb(244, 217, 216, 0.8);
+    background-color: rgba(203, 228, 253, 0.39);
    font-family: cursive;
-   text-transform: uppercase;
-   text-decoration:underline;
-   color:#533737;
+   text-transform: capitalize;
+   
+   color:#534453;
 }
 .p-tittle{
     display: flex;
@@ -71,10 +71,11 @@ textarea{
     margin: 20px;
     margin-right: 0px;
     margin-bottom: 0px;
-    padding: 40px;
+    padding: 60px;
     align-items: center;
     text-align: center;
-    background-color: rgb(242, 245, 248,);
+    background-color: rgba(203, 228, 253, 0.39);
+    border-radius: 360px;
     font-family: cursive;
     color: rgb(71, 70, 70);
     font-style: oblique;
