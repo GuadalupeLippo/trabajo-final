@@ -65,6 +65,16 @@ function renderTable (data){
     
     const estadoCell = document.createElement("td");
     estadoCell.textContent= ped.estado ? "entregado" : "en proceso";
+    if(ped.estado)
+    {
+        estadoCell.classList.add(`entregado`)  
+        estadoCell.classList.remove("enProceso") 
+    } else {
+             estadoCell.classList.add(`enProceso`) 
+            estadoCell.classList.remove("entregado") 
+        }
+
+    
     row.appendChild(estadoCell);
 
     tablaPedidos.appendChild(row);
@@ -118,19 +128,14 @@ function handleActualizarBtn(e) {
 };
 function handleEliminarBtn() {
     const pedId =Number( editarListaPed.querySelector("#pedId").textContent);
-   
-   
-   const validar = confirm("¿desea eliminar el pedido?")
-   if(validar == true) {
- const pedN = pedidos.filter(ped => ped.id !== pedId);
- console.log(pedN)  //falta mostrar por pantalla
+   newPed = pedidos.filter(ped => ped.id !== pedId)
+    console.log(newPed)
+    listaPedidosModal.close();
+ }
+ //falta mostrar por pantalla
  
 
-    listaPedidosModal.close();
     
-   
-};
-}
 function handleEstadoBtn() {
     const pedId = Number(editarListaPed.querySelector("#pedId").textContent);
     
@@ -139,7 +144,6 @@ function handleEstadoBtn() {
         ped.estado = false
     } else{ ped.estado = true}
 
-    listaPedidosModal.close();
     renderTable()
 };
 
