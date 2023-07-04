@@ -211,6 +211,10 @@ footer{
     font-size:small ;
 }
 
-.instagram{
-    text-transform: none;
+.visita{
+    outline: none;
+    cursor: pointer;
+    color: rgb(107, 104, 104);
+
+    
 }
