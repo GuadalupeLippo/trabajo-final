@@ -1,4 +1,4 @@
-const pedidos = []
+let pedidos = []
 
 //capturacion de elementos
 const agregarPedidos =  document.getElementById("agregarPedido");
@@ -43,7 +43,7 @@ function renderTable (data){
     
     pedidos.forEach((ped) => {
     const row = document.createElement("tr");
-    row.classList.add(`tabla-row`)
+    row.classList.add("tr")
     row.setAttribute("id", "ped")
     row.setAttribute("data-ped-id",ped.id);
     
@@ -128,11 +128,14 @@ function handleActualizarBtn(e) {
 };
 function handleEliminarBtn() {
     const pedId =Number( editarListaPed.querySelector("#pedId").textContent);
-   newPed = pedidos.filter(ped => ped.id !== pedId)
-    console.log(newPed)
+    let validar= confirm("¿desea eliminar el pedido?")
+   if(validar) 
+   {pedidos = pedidos.filter(ped=> ped.id !== pedId)
+    alert("El pedido se elimino correctamente")
+   }
+  renderTable(pedidos)
     listaPedidosModal.close();
- }
- //falta mostrar por pantalla
+}
  
 
     
@@ -167,5 +170,4 @@ function AgregarTareas(e) {
     renderTable(pedidos);
     agregarPedidos.reset()
     }
-
 }

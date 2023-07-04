@@ -8,12 +8,12 @@
     width: 100%;
     background-color: #f8edef;
     color: rgb(59, 73, 78);
+    font-family: cursive;
 }
 
 header{
     width: 100%;
     display: inline-block;
-   
     border-bottom: solid #77d8d6;
     border-top: solid #77d8d6 ;
     margin-top: 50px;
@@ -29,10 +29,9 @@ h1{
     justify-content: center;
     padding-top: 30px;
     align-items: center;
-    font-family: sans-serif;
     text-transform: uppercase;
     text-decoration: underline;
-    
+      font-family: cursive;
     
 }
 form{
@@ -85,22 +84,25 @@ input{
     text-transform: uppercase;
     text-align: center;
  }
- #tablaDePedidos th,#tablaDePedidos td{
+ #tablaDePedidos thead th{
     padding: 5px 10px;
-    background-color: #fff1f8;
-    border: solid 1px #ccc9c9;
+    background-color: #c3e7ff;
+    border: solid 2px #ccc9c9;
  }
- .tabla-ped{
-
+ tbody tr td{
+  background-color: #f7f4f4;
     text-transform: lowercase;
+    border: solid 2px #ccc9c9;
+    font-family: sans-serif;
  }
- .tabla-row:hover{
+
+ .tr:hover{
    cursor: pointer;
-  color: #ff8795;
+  color: #7bc9fd;
  }
 
  .entregado{
-   text-transform: capitalize;
+
    color: rgb(37, 172, 37);
  }
  .enProceso{
